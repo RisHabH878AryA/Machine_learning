@@ -4,9 +4,9 @@
 
 **Mini exercises:**
 
-* Filter all even numbers from a list of 1–100.
-* Square all numbers in a list without a loop (use comprehension).
-* Flatten a list of lists in one line.
+* P1: Filter all even numbers from a list of 1–100.
+* P2: Square all numbers in a list without a loop (use comprehension).
+* P3: Flatten a list of lists in one line.
 
 **Twist:**
 
