@@ -5,3 +5,8 @@ for x in arr:
     for y in x:
         arr2.append(y)
 print(arr2)
+
+# using lambda and map
+result = sum(list(map(lambda x: list(x),arr)),[]) #works same as below one..
+result = sum(arr, []) #works same as above one..
+print(result)
