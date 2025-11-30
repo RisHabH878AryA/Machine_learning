@@ -18,9 +18,9 @@
 
 **Mini exercises:**
 
-* Count occurrences of each word in a sentence (dict comprehension).
-* Swap keys and values of a dictionary.
-* Create a dict of numbers 1–10 and their squares.
+* P1: Count occurrences of each word in a sentence (dict comprehension).
+* P2: Swap keys and values of a dictionary.
+* P3: Create a dict of numbers 1–10 and their squares.
 
 **Twist:**
 
@@ -32,9 +32,9 @@
 
 **Mini exercises:**
 
-* Find common elements between two lists.
-* Remove duplicates from a list while preserving order (slightly tricky!).
-* Use sets to check if a list has any duplicates efficiently.
+* P1: Find common elements between two lists.
+* P2: Remove duplicates from a list while preserving order (slightly tricky!).
+* P3: Use sets to check if a list has any duplicates efficiently.
 
 ---
 
@@ -42,9 +42,9 @@
 
 **Mini exercises:**
 
-* Write a function that takes any number of arguments and returns the sum.
-* Write a lambda that checks if a string is palindrome.
-* Nested functions: Create a function that returns another function which multiplies by `n`.
+* P1: Write a function that takes any number of arguments and returns the sum.
+* P2: Write a lambda that checks if a string is palindrome.
+* P3: Nested functions: Create a function that returns another function which multiplies by `n`.
 
 ---
 
