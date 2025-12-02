@@ -52,9 +52,9 @@
 
 **Mini exercises:**
 
-* Read a CSV, count number of rows, columns, missing values.
-* Write a JSON file from a dict and read it back.
-* Read a text file, count frequency of each word.
+* P1: Read a CSV, count number of rows, columns, missing values.
+* P2: Write a JSON file from a dict and read it back.
+* P3: Read a text file, count frequency of each word.
 
 ---
 
@@ -62,9 +62,9 @@
 
 **Mini exercises:**
 
-* Open a file that doesn’t exist and catch the exception gracefully.
-* Handle division by zero in a function that takes two numbers.
-* Try converting strings to integers, catch `ValueError` if conversion fails.
+* P1: Open a file that doesn’t exist and catch the exception gracefully.
+* P2: Handle division by zero in a function that takes two numbers.
+* P3: Try converting strings to integers, catch `ValueError` if conversion fails.
 
 ---
 
