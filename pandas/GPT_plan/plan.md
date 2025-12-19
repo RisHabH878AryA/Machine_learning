@@ -1,237 +1,194 @@
-[Plan](https://www.geeksforgeeks.org/pandas/pandas-tutorial/)
+# 🐾 Pandas Dojo — Full Training Levels
 
-# 🐾 PANDAS MASTERY ROADMAP (Cat-Dojo Edition)
-
-A level-based, practical training path designed to help you master Pandas by doing, experimenting, and building real mini-projects.
-
----
-
-## **LEVEL 0 — Preparation (30 minutes)**
-
-### **Goal:** Pure readiness.
-
-**Do:**
-
-* Install pandas
-* Create a `pandas_lab` folder
-* Open Jupyter/VSCode
-* Load 2 test files:
-
-  * `sample.csv` (10 rows)
-  * `large.csv` (5000+ rows from Kaggle)
-
-**Checkpoints:**
-
-* ✔️ Can import pandas
-* ✔️ Can read a CSV without googling
-* ✔️ Can print shape, columns
+Welcome to the Pandas Dojo.  
+No timelines.  
+Just **levels → drills → questions → problems** to forge mastery.
 
 ---
 
-## **LEVEL 1 — DataFrame Core Moves (the fundamentals)**
+# 🐾 LEVEL 0 — Boot Sequence (Awareness)
 
-### **Goal:** Move through DataFrames effortlessly.
+**Goal:** Know your tools & environment.
 
-### **Learn:**
+## Drills
+- Create a folder for your datasets.  
+- Load a CSV from disk.  
+- Load a CSV from an online link.  
+- Print: `shape`, `columns`, `dtypes`, `head`, `tail`.
 
-* `.head()`, `.tail()`, `.info()`, `.describe()`
-* Column selection
-* Row filtering
-* Boolean masking
-* Chaining (`df[condition][columns]`)
+## Questions
+- Difference between `shape` and `info`?  
+- Why does dtype matter?  
+- What breaks when numbers are stored as strings?
 
-### **Micro-drills:**
-
-* Load CSV → show first 5 rows
-* Select 3 specific columns
-* Filter rows where age > 30
-* Filter with multiple conditions
-* Drop columns/rows
-
-### **Mini Project #1 — Student Marks Cleaner:**
-
-* Clean missing values
-* Remove students with <35 marks
-* Sort top scorers
-* Export to CSV
-
-**Checkpoint:**
-
-* ✔️ You can manipulate columns/rows without thinking.
+## Problems
+- CSV loads numbers as object → identify cause.  
+- File has 50 columns, you need 10 → how to verify?  
+- Weird encoding on load → what do you check?
 
 ---
 
-## **LEVEL 2 — Data Types & Cleaning (the real battle)**
+# 🐾 LEVEL 1 — DF Fundamentals (Motor Control)
 
-### **Goal:** Clean data with precision.
+**Goal:** Navigate a DataFrame fast.
 
-### **Learn:**
+## Drills
+- Select: one column, many columns, row slice, row by index.  
+- Filter: single condition, two conditions, OR, NOT.  
+- Create & reuse boolean masks.  
+- Drop columns and rows.
 
-* `.astype()` conversions
-* `.isna()`, `.dropna()`, `.fillna()`
-* `.replace()`
-* String ops: `.str.lower()`, `.str.extract()`
-* Datetime: `pd.to_datetime()`
+## Questions
+- Mental diff between selecting columns vs filtering rows?  
+- When can chained filters misbehave?  
+- Why boolean masks > plain filtering?
 
-### **Micro-drills:**
-
-* Convert salary column to int
-* Replace "N/A" and "missing" with NaN
-* Extract username from email
-* Fix mixed types in columns
-* Parse dates & sort
-
-### **Mini Project #2 — Zomato Cleaning Lite:**
-
-Fix a messy CSV with:
-
-* Wrong types
-* Garbage strings
-* Missing ratings
-* Date issues
-
-**Checkpoint:**
-
-* ✔️ You can clean messy real-world data.
+## Problems
+- Extract rows where age is 20–35.  
+- Remove bottom 20 rows.  
+- Keep only name, age, city & verify stability.
 
 ---
 
-## **LEVEL 3 — Merging, Grouping, Aggregating**
+# 🐾 LEVEL 2 — Data Cleaning (Deep Surgery)
 
-### **Goal:** Summarize and combine datasets.
+**Goal:** Fix messy, inconsistent data.
 
-### **Learn:**
+## Drills
+- Convert dtype to int, float, category, datetime.  
+- Detect missing values.  
+- Drop missing rows.  
+- Fill missing using mean, 0, "Unknown".  
+- Replace garbage strings.  
+- Extract username from email, year from date, first name from full name.
 
-* `merge()` (inner/left/right)
-* `concat()` (rows/columns)
-* `groupby()` + `agg()`
-* `value_counts()`
-* Pivot tables
+## Questions
+- Why dtype conversion early?  
+- Strategic diff: `dropna` vs `fillna`?  
+- When is replace > fill?  
+- Why dates-as-string is dangerous?
 
-### **Micro-drills:**
-
-* Merge students with fees
-* Group employees by department
-* Count category frequencies
-* Create pivot table
-
-### **Mini Project #3 — IPL Mini Analysis:**
-
-* Use matches + deliveries datasets
-* Find top batsman per season
-* Compute purple/orange cap stats
-* Export summaries
-
-**Checkpoint:**
-
-* ✔️ You can join and summarize real data.
+## Problems
+- Clean salary column with: `"5000"`, `"5,000"`, `"$5000"`, `NaN`.  
+- Fix mixed-format date column.  
+- Clean mixed-type age column.
 
 ---
 
-## **LEVEL 4 — Advanced Manipulation**
+# 🐾 LEVEL 3 — Grouping, Summaries & Combining (Strategic Thinking)
 
-### **Goal:** Transform data like a pro.
+**Goal:** Compress data & find patterns.
 
-### **Learn:**
+## Drills
+- Group by columns: count/mean/sum/min/max.  
+- Group by two columns.  
+- Create pivot tables.  
+- Use value_counts across multiple columns.  
+- Merge: inner, left, right, outer.  
+- Concat rows and columns.
 
-* `.apply()` vs `.map()` vs `.applymap()`
-* Lambdas in pandas
-* `.duplicated()`
-* `.nlargest()`
-* Normalization & scaling
-* Binning: `pd.cut`, `pd.qcut`
+## Questions
+- Why is groupby more powerful than filtering?  
+- Conceptual difference: merge vs concat?  
+- Why pivot tables matter?
 
-### **Micro-drills:**
-
-* Normalize salary column
-* Tag age groups
-* Remove duplicates
-* Apply a custom function
-* Find top 10 expenses
-
-### **Mini Project #4 — Expense Analyzer:**
-
-* Load personal expenses CSV
-* Categorize
-* Summaries
-* Wasteful spending detection
-* Monthly breakdown
-
-**Checkpoint:**
-
-* ✔️ You can reshape, transform, categorize anything.
+## Problems
+- Students dataset → avg marks per subject, top scorer per subject.  
+- Employees dataset → count per department, highest salary per dept.  
+- Merge datasets with mismatches → detect mismatched keys.
 
 ---
 
-## **LEVEL 5 — Time Series & Visualization**
+# 🐾 LEVEL 4 — Transformations (Shape-Shifting Mode)
 
-### **Goal:** Understand trends over time.
+**Goal:** Bend data into new forms.
 
-### **Learn:**
+## Drills
+- Apply a function to a column.  
+- Map using a dictionary.  
+- Applymap to entire DF.  
+- Remove duplicates.  
+- Rank values.  
+- Normalize 0–1.  
+- Bin numbers: fixed bins & quantile bins.
 
-* `.resample()`
-* `.shift()`
-* Rolling windows
-* `.plot()` for quick visuals
+## Questions
+- When is apply > map?  
+- Why quantile bins > fixed bins for skewed data?  
+- Risks of apply (performance)?
 
-### **Micro-drills:**
-
-* Convert timestamp → datetime
-* Compute weekly/monthly averages
-* Moving average of sales
-* Spike detection via shift + diff
-
-### **Mini Project #5 — Covid Timeseries Lite:**
-
-* Weekly/monthly charts
-* Rolling average
-* Peak detection
-
-**Checkpoint:**
-
-* ✔️ You understand temporal patterns.
+## Problems
+- Tag transaction amounts small/medium/large.  
+- Normalize them.  
+- Remove duplicate SKUs & detect inconsistent duplicates.  
+- Rank top 10% salaries.
 
 ---
 
-## **LEVEL 6 — Final Boss: Full Project**
+# 🐾 LEVEL 5 — Time Series (Temporal Awareness)
 
-Pick one dataset and deeply analyze it:
+**Goal:** Understand data across time.
 
-* Zomato
-* IPL
-* Airbnb
-* Covid
-* Car price
-* Titanic
-* Customer churn
+## Drills
+- Convert column to datetime.  
+- Sort by date.  
+- Extract year/month/day.  
+- Resample daily→weekly, weekly→monthly.  
+- Compute rolling averages.  
+- Detect spikes with diff + shift.
 
-### **Rules:**
+## Questions
+- Why datetime dtype exists?  
+- What insights appear only after resampling?  
+- How does rolling window smooth noise?
 
-* Clean → preprocess → analyze → visualize
-* Document everything
-* Export final insights
-
-**Checkpoint:**
-
-* ✔️ You can handle a real project confidently.
-
----
-
-## **LEVEL X — Forge Your Own Dataset**
-
-Track something from your life for 7 days:
-
-* Food
-* Mood
-* Expenses
-* Screen time
-* ML training logs
-
-Analyze it using the above skills.
-This builds real mastery like nothing else.
+## Problems
+- Detect weeks with >40% sales jump.  
+- Compute 7-day moving visitor average.  
+- Detect month-wise seasonal pattern.
 
 ---
 
-## **End Goal**
+# 🐾 LEVEL 6 — Full Project (Real-World Combat)
 
-By following this roadmap sincerely, you will be capable of analyzing, cleaning, transforming, and extracting insights from any dataset placed before you.
+**Goal:** Apply everything end-to-end.
+
+## Tasks
+- Pick a messy dataset.  
+- Clean types, missing, strings, dates.  
+- Summaries + groupings.  
+- Transform into new columns.  
+- Write plain-English insights.  
+- Export cleaned + analyzed files.
+
+## Questions
+- Which insights are meaningful vs noise?  
+- Which transformations helped most?  
+- Which mistakes wasted time?
+
+## Problems
+- Re-do project with totally different dataset.  
+- Merge 2–3 datasets.  
+- Create 10 original questions & answer with pandas.
+
+---
+
+# 🐾 LEVEL X — Self-Dataset (Master Forging)
+
+**Goal:** Build your own dataset.
+
+## Drills
+Track something for 3–7 days:  
+- mood, expenses, food, workouts, screen time, ML training logs.  
+- Build dataset → clean → analyze → extract patterns.
+
+## Questions
+- Hardest column to clean?  
+- Most surprising trend?  
+- What would change with more data?
+
+---
+
+# Start
+
+Say **“meow start level 0”** to begin the guided step-by-step dojo.
